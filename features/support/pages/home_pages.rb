@@ -1,9 +1,9 @@
-require_relative 'sections'
+#require_relative 'sections'
 
 class HomePage < SitePrism::Page
 
 	set_url '/'
-	section :nav, Navbar, '#top-navigation'
+	#section :nav, Navbar, '#top-navigation'
 
 	#section :meven, MeusEventoss, '#wrap'
 
