@@ -1,0 +1,3 @@
+logs/shots
+logs/*.html
+logs/*.json
