@@ -1,5 +1,5 @@
 
-require_relative 'sections'
+#require_relative 'sections'
 
 
 
@@ -7,7 +7,7 @@ class LoginPage < SitePrism::Page
       
    set_url '/'
     
-   section :hom, HomePage, '#frmLoginModal'
+   #section :hom, HomePage, '#frmLoginModal'
   
     element :imput_email, '#txtEmailLogin'
     element :imput_senha, '#txtSenha'
