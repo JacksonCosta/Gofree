@@ -18,7 +18,7 @@ require 'date'
 # end
 
 
-  Capybara.register_driver :poltergeist do |app| 
+  Capybara.register_driver :selenium do |app| 
     Capybara::Poltergeist::Driver.new(app, { js_errors: false, timeout: 300, phantomjs_options: [ '--load-images=no', '--ignore-ssl-errors=yes', '--ssl-protocol=any']}) 
 end
 
