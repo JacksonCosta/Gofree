@@ -13,13 +13,19 @@ require 'pry'
 require 'date'
 
 
-
-Capybara.register_driver :selenium do |app| 
-    Capybara::Poltergeist::Driver.new(app, { js_errors: false, timeout: 300, phantomjs_options: [ '--debug=no', '--ssl-protocol=TLSv1', '--load-images=false', '--ignore-ssl-errors=yes', '--ssl-protocol=any', '--ignore-ssl-errors=true']}) 
+Capybara.register_driver :selenium do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
 end
 
+#Capybara.register_driver :selenium do |app| 
+   # Capybara::Poltergeist::Driver.new(app, { js_errors: false, timeout: 300, phantomjs_options: [ '--debug=no', '--ssl-protocol=any', '--load-images=yes', '--ignore-ssl-errors=yes', '--output-encoding=utf8']}) 
+  
+#end
+
+
 Capybara.configure do |config|
-    config.default_driver = :selenium
+    config.default_driver = :selenium_chrome_headless
+
     config.app_host = 'https://des.quantumweb.com.br:4434/gofree/automatizado/site/'
 end
 
