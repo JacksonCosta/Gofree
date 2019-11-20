@@ -14,7 +14,7 @@ require 'date'
 
 
 Capybara.register_driver :selenium do |app|
-  Capybara::Selenium::Driver.new(app, { js_errors: false, chrome_options: ['--headless', '--no-sandbox', '--disable-dev-shm-usage']})
+  Capybara::Selenium::Driver.new(app, { js_errors: false, chrome_options: ['--headless', '--no-sandbox', '--disable-dev-shm-usage', '--remote-debugging-port=9222']})
 end
 
 #Capybara.register_driver :selenium do |app| 
