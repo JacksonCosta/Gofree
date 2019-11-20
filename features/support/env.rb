@@ -29,7 +29,7 @@ end
 
 
 Capybara.configure do |config|
-    config.default_driver = :selenium_chrome_headless
+    config.default_driver = :selenium_chrome
 
     config.app_host = 'https://des.quantumweb.com.br:4434/gofree/automatizado/site/'
 end
