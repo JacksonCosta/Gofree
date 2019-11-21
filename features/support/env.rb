@@ -17,7 +17,8 @@ chrome_bin = ENV.fetch('GOOGLE_CHROME_SHIM', nil)
 chrome_opts = chrome_bin ? { "chromeOptions" => { "binary" => chrome_bin } } : {}
 
 Capybara.register_driver :selenium do |app|
-   Capybara::Selenium::Driver.new(app, { js_errors: false, chrome_options: ['no-sandbox', '--disable-setuid-sandbox', '--headless', '--disable-gpu', '--remote-debugging-port=9222']})
+   Capybara::Selenium::Driver.new(app, { js_errors: false, chrome_options: ['no-sandbox']})
+   #, '--disable-setuid-sandbox', '--headless', '--disable-gpu', '--remote-debugging-port=9222'
 end
 
 
