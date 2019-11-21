@@ -12,18 +12,15 @@ require 'pry'
 
 require 'date'
 
+chrome_bin = ENV.fetch('GOOGLE_CHROME_SHIM', nil)
 
-#Capybara.register_driver :selenium do |app|
-   #Capybara::Selenium::Driver.new(app, { js_errors: false, chrome_options: ['no-sandbox', '--disable-setuid-sandbox', '--headless', '--disable-gpu', '--remote-debugging-port=9222']})
-#end
+chrome_opts = chrome_bin ? { "chromeOptions" => { "binary" => chrome_bin } } : {}
 
-Capybara.register_driver :chrome do |app|
-	options = Selenium::WebDriver::Chrome::Options.new(args: %w[no-sandbox headless disable-gpu])
-
-	Capybara::Selenium::Driver.new(app, browser: :chrome, options: options)
+Capybara.register_driver :selenium do |app|
+   Capybara::Selenium::Driver.new(app, { js_errors: false, chrome_options: ['no-sandbox', '--disable-setuid-sandbox', '--headless', '--disable-gpu', '--remote-debugging-port=9222']})
 end
 
-Capybara.javascript_driver = :chrome
+
 
 
 Capybara.configure do |config|
