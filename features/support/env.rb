@@ -20,8 +20,8 @@ Capybara.default_driver = :selenium_chrome
 #if BROWSER.eql?('remote')
   Capybara.register_driver :selenium_chrome do |app|
     Capybara::Selenium::Driver.new(app,
-      :browser => :remote,
-      :desired_capabilities => :chrome,
+      #:browser => :remote,
+      #:desired_capabilities => :chrome,
       :url => "https://des.quantumweb.com.br:4434/gofree/automatizado/site/"
     )
   end
