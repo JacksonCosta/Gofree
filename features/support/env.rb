@@ -13,9 +13,9 @@ require 'pry'
 require 'date'
 
 
-Capybara.register_driver :selenium do |app|
-    Capybara::Selenium::Driver.new(app, :browser => :chrome)
-end
+#Capybara.register_driver :selenium do |app|
+    #Capybara::Selenium::Driver.new(app, :browser => :chrome)
+#end
 
 Capybara.register_driver :selenium do |app| 
     Capybara::Poltergeist::Driver.new(app, js_errors: false)
