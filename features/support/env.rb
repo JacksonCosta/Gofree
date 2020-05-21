@@ -7,6 +7,7 @@ require 'rspec'
 require 'ffi'
 require 'pry'
 require 'date'
+require_relative "helpers"
 
 
 case ENV["BROWSER"]
