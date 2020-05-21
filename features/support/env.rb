@@ -7,15 +7,6 @@ require 'rspec'
 require 'ffi'
 require 'pry'
 require 'date'
-require 'rspec'
-require 'rspec/expectations'
-require 'capybara'
-require 'capybara/rspec'
-
-RSpec.configure do |config| 
-  config.include Capybara::DSL  
-  config.include Capybara::RSpecMatchers
-end
 
 
 case ENV["BROWSER"]
