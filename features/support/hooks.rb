@@ -8,31 +8,19 @@ Before do
     
    page.current_window.resize_to(1920, 1080) 
 end
-Before('@authSemLogin') do
-    @login.load
-    @login_wait_for_botao_entrar
-end
-
 
 Before('@auth') do
     @login.load
     @login_wait_for_botao_entrar
     @login.abrirLogin
     @login.logar('jakson.costa@qwti.com.br', '123456')
-  end
+end
 
 
 After('@logout') do
     @home.bye
 end
 
-After('@FecharPopupOrg') do
-    @paginaOrganizador.btn_OKMensagem.click
-end
-
-After('@FecharPopupCadIngresso') do
-    @CadastrarIngresso.btn_OKMensagem.click
-end
 
 # ===== Slavar imagens e nomea-las com os cenários =========
 After do |scenario|
