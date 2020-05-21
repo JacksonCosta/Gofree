@@ -4,8 +4,7 @@ Before do
     @home = HomePage.new
     @loginFacebook = LoginFacebook.new
     @loginGoogle = LoginGoogle.new
-     #@editar1 = Editar.new
-    page.current_window.resize_to(1360, 768)
+    page.current_window.resize_to(1920, 1080)
     
     
 end
